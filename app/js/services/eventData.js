@@ -9,9 +9,9 @@ eventsApp.factory('eventData', function($resource){
         } }
     );
     return {
-        getEvent: function(){
+        getEvent: function(eventId){
             return resource.get({
-                id: 1
+                id: eventId
             });
         },
         save: function(event){
