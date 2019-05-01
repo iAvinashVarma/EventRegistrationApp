@@ -15,4 +15,8 @@ eventsApp.config(function($routeProvider){
         templateUrl: 'templates/eventDetails.html',
         controller: 'eventCtrl'
     });
+
+    $routeProvider.otherwise({
+        redirectTo: '/events'
+    });
 });
