@@ -8,12 +8,26 @@ eventsApp.config(function($routeProvider, $locationProvider){
 
     $routeProvider.when("/events", {
         templateUrl: 'templates/eventList.html',
-        controller: 'eventListCtrl'
+        controller: 'eventListCtrl',
+        resolve: {
+            events: function($route, eventData){
+                return eventData.getAllEvents().$promise;
+            }
+        }
     });
 
     $routeProvider.when("/event/:eventId", {
         templateUrl: 'templates/eventDetails.html',
-        controller: 'eventCtrl'
+        controller: 'eventCtrl',
+        resolve: {
+            event: function($route, eventData){
+                return eventData.getEvent($route.current.pathParams.eventId).$promise;
+            }
+        }
+    });
+
+    $routeProvider.when("/templates", {
+        template: 'Howdy World!',
     });
 
     $routeProvider.otherwise({
