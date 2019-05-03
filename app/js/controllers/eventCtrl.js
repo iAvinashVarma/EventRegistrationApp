@@ -11,7 +11,8 @@ eventsApp.controller('eventCtrl', function EventController($scope, $log, $routeP
             $log.error(response);
         }
     );
-    $log.info($route.current.foo);
+    $log.info($route.current.params.foo);
+    $log.info($route.current.pathParams.eventId);
     $scope.upVoteSession = function(session){
         session.upVoteCount++;
     }
