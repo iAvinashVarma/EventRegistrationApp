@@ -9,10 +9,10 @@
 </head>
 <body ng-cloak>
     <div class="container">
-        <div class="navbar">
+        <div class="navbar" ng-controller="mainMenuCtrl">
             <div class="navbar-inner">
                 <ul class="nav">
-                    <li><a href="newEvent">Create Event</a></li>
+                    <li><a href="#" ng-click="createEvent()">Create Event</a></li>
                 </ul>
             </div>
         </div>
@@ -28,6 +28,7 @@
     <script src="js/controllers/eventCtrl.js"></script>
     <script src="js/controllers/editEventCtrl.js"></script>
     <script src="js/controllers/eventListCtrl.js"></script>
+    <script src="js/controllers/mainMenuCtrl.js"></script>
     <script src="js/services/eventData.js"></script>
     <script src="js/filters/durations.js"></script>
     <script src="lib/bootstrap.min.js"></script>
