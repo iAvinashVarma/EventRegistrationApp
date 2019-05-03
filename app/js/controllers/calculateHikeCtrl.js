@@ -2,9 +2,7 @@
 
 eventsApp.controller('calculateHikeCtrl',
     function calculateHikeCtrl($scope){
-        $scope.oldSalary = 0;
-        $scope.newSalary = 0;
-        $scope.hikePercentage = function(){
+        $scope.hikePercentage = function(os, ns){
             var os = $scope.oldSalary;
             var ns = $scope.newSalary;
             if(os && ns && os > 0 && ns > 0){
