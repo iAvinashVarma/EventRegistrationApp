@@ -10,7 +10,7 @@ eventsApp.config(function($routeProvider, $locationProvider){
         templateUrl: 'templates/eventList.html',
         controller: 'eventListCtrl',
         resolve: {
-            events: function($route, eventData){
+            events: function(eventData){
                 return eventData.getAllEvents().$promise;
             }
         }
@@ -26,8 +26,13 @@ eventsApp.config(function($routeProvider, $locationProvider){
         }
     });
 
-    $routeProvider.when("/templates", {
-        template: 'Howdy World!',
+    $routeProvider.when("/about", {
+        template: '<h2>About Me</h2><hr/><p>My name is Avinash.</p>',
+    });
+
+    $routeProvider.when("/editProfile", {
+        templateUrl: 'templates/editProfile.html',
+        controller: 'editProfileCtrl'
     });
 
     $routeProvider.otherwise({
