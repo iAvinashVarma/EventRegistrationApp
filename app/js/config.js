@@ -12,6 +12,7 @@ eventsApp.config(function($routeProvider){
     });
 
     $routeProvider.when("/event/:eventId", {
+        foo: "avi",
         templateUrl: 'templates/eventDetails.html',
         controller: 'eventCtrl'
     });
