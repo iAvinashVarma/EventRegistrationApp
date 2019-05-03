@@ -16,6 +16,11 @@ eventsApp.config(function($routeProvider, $locationProvider){
         }
     });
 
+    $routeProvider.when("/calculateHike", {
+        templateUrl: 'templates/calculateHike.html',
+        controller: 'calculateHikeCtrl'
+    });
+
     $routeProvider.when("/event/:eventId", {
         templateUrl: 'templates/eventDetails.html',
         controller: 'eventCtrl',
