@@ -11,6 +11,7 @@ eventsApp.controller('mainMenuCtrl',
         $log.info('hash: ' + $location.hash());
         $log.info('url: ' + $location.url());
         $scope.createEvent = function(){
+            $location.replace();
             $location.url('/newEvent');
         }
     }
