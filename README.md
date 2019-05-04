@@ -1,6 +1,11 @@
 # Event Registration App
 
-This project is a sample Event Registration App.
+Event Registration App is used to register various events.
+
+[![Build status](https://avvarma.visualstudio.com/ProgLan/_apis/build/status/EventRegistrationApp?branchName=master)](https://avvarma.visualstudio.com/ProgLan/_build/latest?definitionId=16)
+![apm](https://img.shields.io/apm/l/vim-mode.svg)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/iAvinashVarma) [![Twitter Follow](https://img.shields.io/twitter/follow/iAvinashVarma.svg?style=social&label=Follow)](https://twitter.com/iAvinashVarma)
+![GitHub followers](https://img.shields.io/github/followers/iAvinashVarma.svg?style=flat-square&label=Follow)
 
 ## Running the application - Windows
 
@@ -31,5 +36,5 @@ $ npm install -g karma-cli
 ## Running Tests
 
 ```bash
-$ karma start test\karma.config.js
+$ karma start test/karma.config.js
 ```
