@@ -14,9 +14,11 @@ module.exports = function(config){
 
     autoWatch : false,
 
+    singleRun: true,
+
     frameworks: ['jasmine'],
 
-    browsers : ['Chrome'],
+    browsers : ['ChromeHeadless'],
 
     plugins : [
       'karma-chrome-launcher',
