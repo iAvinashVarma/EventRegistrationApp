@@ -13,7 +13,6 @@ module.exports.save = function(req, res) {
 };
 
 module.exports.getAll = function(req, res){
-
     var files = [];
     try {
         files = fs.readdirSync(dataPath);
