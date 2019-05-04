@@ -4,7 +4,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Event Registration App",
+            "name": "eventregistrationapp",
             "program": "${workspaceFolder}\\scripts\\web-server.js"
         }
     ]
