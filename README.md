@@ -1,12 +1,35 @@
 # Event Registration App
 
-This project is a sample application demonstrating a more fully developed realistic single page
-angular application.
+This project is a sample Event Registration App.
 
-## Server
+## Running the application - Windows
 
-Two Servers are provided, an ASP.NET MVC server, and a node server. If using the ASP.NET server, simply start it up in IIS. If using the node server, from the command line run "npm install" and then either "server.sh" if you are on a linux box or "server.bat" if you are on a windows box.
+```cmd
+C:\App> npm install
+C:\App> npm audit fix
+C:\App> server.bat
+```
 
-## Running the application
+## Running the application - Ubuntu
 
-Navigate your browser to `http://localhost:8000/` to see the app running in your browser. You may have to add the page to the url such as EventDetails.html depending on where you are at in the course. The port may be configured either in the node server or on IIS.
+```bash
+$ npm install
+$ npm audit fix
+$ server.sh
+```
+
+## Navigation
+
+* Navigate your browser to `http://localhost:8000/` to see the app running in your browser.
+
+## Install Karma
+
+```bash
+$ npm install -g karma-cli
+```
+
+## Running Tests
+
+```bash
+$ karma start test\karma.config.js
+```

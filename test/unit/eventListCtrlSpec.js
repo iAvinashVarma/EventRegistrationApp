@@ -1,6 +1,6 @@
 'use strict';
 
-describe('eventListCtrl', function(){
+describe('eventListCtrlSpec', function(){
     var $controllerConstructor, scope, mockEventData;
 
     beforeEach(module('eventsApp'));
