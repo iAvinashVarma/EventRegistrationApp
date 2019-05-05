@@ -30,5 +30,26 @@ describe('event registration app', function(){
             var list = element.all(by.repeater('session in event.sessions'));
             expect(list.count()).toEqual(3);
         })
+
+        it('should have 1 session when introductory is chose', function(){
+            var selectElement = element(by.model('query.level'));
+            selectElement.element(by.cssContainingText('option', 'Introductory')).click();
+            var list = element.all(by.repeater('session in event.sessions'));
+            expect(list.count()).toEqual(1);
+        })
+
+        it('should sort correctly when sort order is changed', function(){
+            var selectElement = element(by.model('sortorder'));
+            selectElement.element(by.cssContainingText('option', 'Votes')).click();
+            var firstSession = element.all(by.repeater('session in event.sessions')).first();
+            var firstSessionName = firstSession.element(by.binding('title')).getText();
+            expect(firstSessionName).toEqual('Scopes for fun and profit');
+        })
+
+        it('should increment the vote count when a session in upvoted', function(){
+            element.all(by.deepCss('div.votingButton')).first().click();
+            var firstVoteCount = element.all(by.binding('count')).first();
+            expect(firstVoteCount.getText()).toEqual('1');
+        })
     })
 })
