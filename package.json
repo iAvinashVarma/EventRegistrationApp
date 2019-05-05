@@ -19,6 +19,8 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^2.0.0",
     "karma-jasmine": "^2.0.1",
-    "morgan": "^1.9.1"
+    "karma-ng-html2js-preprocessor": "^1.0.0",
+    "morgan": "^1.9.1",
+    "ng-html2js": "^3.0.0"
   }
 }
