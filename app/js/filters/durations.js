@@ -11,6 +11,8 @@ eventsApp.filter('durations', function(){
                 return "Half Day";
             case 4:
                 return "Full Day";
+            default:
+                return "";
         }
     }
 });
