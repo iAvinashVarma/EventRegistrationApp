@@ -7,13 +7,15 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "protractor test/protractor.conf.js"
   },
   "author": "Joe Eames, Jim Cooper & Avi",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
+    "gulp": "^4.0.1",
     "jasmine-core": "^3.4.0",
     "karma": "^4.1.0",
     "karma-chrome-launcher": "^2.2.0",
@@ -21,6 +23,9 @@
     "karma-jasmine": "^2.0.1",
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "morgan": "^1.9.1",
-    "ng-html2js": "^3.0.0"
+    "ng-html2js": "^3.0.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "phantomjs-prebuilt": "^2.1.16",
+    "protractor": "^5.4.2"
   }
 }

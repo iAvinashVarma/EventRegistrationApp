@@ -12,6 +12,9 @@ steps:
   
 - script: |
    npm i -g karma-cli
+   npm i -g concurrently
+   npm i -g protractor
+   npm i -g webdriver-manager
    npm install
   displayName: 'npm install'
 
@@ -19,4 +22,13 @@ steps:
   displayName: 'npm audit fix'
 
 - script: 'karma start test/karma.conf.js'
-  displayName: 'karma start'
+  displayName: 'karma unit tests'
+
+- script: |
+   webdriver-manager clean
+   webdriver-manager update --chrome
+  #  webdriver-manager start --detach
+  #  protractor test/protractor.conf.js
+   webdriver-manager shutdown
+   webdriver-manager clean
+  displayName: 'protractor end to end tests'
