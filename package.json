@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "protractor test/protractor.conf.js"
+    "test": "protractor test/protractor.conf.js",
+    "start": "node scripts/web-server.js"
   },
   "author": "Joe Eames, Jim Cooper & Avi",
   "license": "ISC",
@@ -21,11 +22,13 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^2.0.0",
     "karma-jasmine": "^2.0.1",
-    "karma-ng-html2js-preprocessor": "^1.0.0",
     "morgan": "^1.9.1",
     "ng-html2js": "^3.0.0",
     "jasmine-spec-reporter": "^4.2.1",
     "phantomjs-prebuilt": "^2.1.16",
     "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "karma-ng-html2js-preprocessor": "^1.0.0"
   }
 }

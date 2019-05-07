@@ -4,8 +4,18 @@ module.exports = function(config){
     basePath : '../app',
 
     preprocessors:{
-      '**/*.html': 'ng-html2js'
+      '**/*.html': ["ng-html2js"]
     },
+
+    ngHtml2JsPreprocessor: {
+      // If your build process changes the path to your templates,
+      // use stripPrefix and prependPrefix to adjust it.
+      stripPrefix: "templates/directives/",
+      prependPrefix: "/templates/directives/",
+  
+      // the name of the Angular module to create
+      moduleName: "my.templates"
+  },
 
     files : [
       'lib/angular/angular.js',
